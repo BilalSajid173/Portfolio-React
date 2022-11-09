@@ -12,6 +12,8 @@ import classes from "./navbar.module.css";
 import { modeActions } from "../../store/darkmode";
 import { useSelector, useDispatch } from "react-redux";
 
+const LinksArray = ["Home", "About", "Work", "Skills"];
+
 const Navbar = () => {
   const isDark = useSelector((state) => state.mode.isDark);
   const [showMenu, setShowMenu] = useState(false);
@@ -19,10 +21,10 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   if (!isDark) {
-    document.body.classList.remove("bg-gray-800");
+    document.body.classList.remove(classes.dark);
     document.documentElement.classList.remove("dark");
   } else {
-    document.body.classList.add("bg-gray-800");
+    document.body.classList.add(classes.dark);
     document.documentElement.classList.add("dark");
   }
 
@@ -50,8 +52,10 @@ const Navbar = () => {
     <Fragment>
       <div
         className={`${
-          colorChange ? "bg-sky-200" : "bg-white"
-        } transition-all duration-300 sticky top-0 z-10 flex flex-wrap items-center p-2 py-4 pl-4 pr-4 sm:pl-8 sm:pr-8 lg:pl-12 lg:pr-12 dark:bg-gray-900`}
+          colorChange
+            ? "bg-sky-200 dark:bg-[#182747]"
+            : "bg-white dark:bg-[#111729]"
+        } transition-all duration-300 sticky top-0 z-10 flex flex-wrap items-center p-4 sm:px-8`}
       >
         <div className="w-fit font-serif text-3xl px-2 font-black mr-auto text-gray-700 dark:text-white">
           Bilal Sajid
@@ -63,18 +67,13 @@ const Navbar = () => {
         <div
           className={`${classes.rightdiv} hidden md:flex w-fit flex-wrap justify-center align-middle text-gray-700 dark:text-white`}
         >
-          <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
-            Home
-          </button>
-          <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
-            About
-          </button>
-          <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
-            Work
-          </button>
-          <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
-            Skills
-          </button>
+          {LinksArray.map((link) => {
+            return (
+              <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
+                {link}
+              </button>
+            );
+          })}
           <button className="transition-all duration-300 px-2 rounded-sm">
             Contact
           </button>
@@ -83,14 +82,14 @@ const Navbar = () => {
           {!showMenu ? (
             <button
               onClick={showMenuHandler}
-              className="transition-all duration-200"
+              className="transition-all duration-200 p-2"
             >
               <MenuIcon />
             </button>
           ) : (
             <button
               onClick={showMenuHandler}
-              className="transition-all duration-200"
+              className="transition-all duration-200 p-2"
             >
               <CloseIcon />
             </button>
@@ -101,7 +100,7 @@ const Navbar = () => {
       <div
         className={`duration-300 ease-in-out transition-all transform ${
           showMenu ? "-translate-x-0" : "-translate-x-full"
-        } py-3 flex flex-col w-[4rem] md:hidden items-center justify-center top-56 opacity-60 left-0 fixed h-[18rem] bg-white z-20 ml-auto dark:bg-gray-900 text-gray-700 dark:text-white`}
+        } py-3 flex flex-col w-[4rem] md:hidden items-center justify-center top-56 opacity-80 left-0 fixed h-[18rem] bg-white z-20 ml-auto dark:bg-[#1b3c8a] text-gray-700 dark:text-white`}
       >
         <button className="transition-all duration-300 px-2 py-1 my-1 text-left hover:text-white">
           <HomeIcon fontSize="large" />

@@ -20,3 +20,8 @@
 h1.fromLeft:after {
   transform-origin: 0% 50%;
 } */
+
+.dark{
+  background-color: #111729;
+}
+
