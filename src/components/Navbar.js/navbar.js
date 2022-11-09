@@ -96,7 +96,6 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div className="h-[120vh]"></div>
       <div
         className={`duration-300 ease-in-out transition-all transform ${
           showMenu ? "-translate-x-0" : "-translate-x-full"
