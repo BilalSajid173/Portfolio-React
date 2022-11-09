@@ -1,5 +1,5 @@
-import "./App.css";
 import Home from "./pages/HomePage";
+import "animate.css";
 
 function App() {
   return (
