@@ -1,4 +1,8 @@
 import { Fragment, useState } from "react";
+// import LightModeIcon from "@mui/icons-material/LightMode";
+// import DarkModeIcon from "@mui/icons-material/DarkMode";
+import MenuIcon from "@mui/icons-material/Menu";
+import classes from "./navbar.module.css";
 
 const Navbar = () => {
   // const isDark = useSelector((state) => state.mode.isDark);
@@ -24,29 +28,26 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <div className="sticky top-0 z-10 flex flex-wrap items-center p-2 pl-4 pr-4 sm:pl-8 sm:pr-8 lg:pl-12 lg:pr-12 bg-white shadow-lg dark:bg-gray-900">
-        <div className="w-fit font-serif text-3xl font-black mr-4 text-gray-700 dark:text-white">
+      <div className="sticky top-0 z-10 flex flex-wrap items-center p-2 py-4 pl-4 pr-4 sm:pl-8 sm:pr-8 lg:pl-12 lg:pr-12 bg-white dark:bg-gray-900">
+        <div className="w-fit font-serif text-3xl font-black mr-auto text-gray-700 dark:text-white">
           Bilal Sajid
         </div>
-        <div className="hidden md:flex w-3/12 p-1 pl-2 pr-2 border border-gray-300 rounded mr-auto dark:border-gray-800"></div>
-        <div className="hidden md:flex w-fit flex-wrap justify-center align-middle text-gray-700 dark:text-white">
-          <button className="transition-all duration-300 px-2 py-1 mr-2 rounded-sm hover:bg-blue-700 hover:text-white">
+        <div
+          className={`${classes.rightdiv} hidden md:flex w-fit flex-wrap justify-center align-middle text-gray-700 dark:text-white`}
+        >
+          <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
             Home
           </button>
-
-          <button className="transition-all duration-300 rounded-sm mr-2 px-2 py-1 hover:bg-blue-700 hover:text-white">
+          <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
             About
           </button>
-
-          <button className="transition-all duration-300 px-2 py-1 rounded-sm border border-blue-700 hover:bg-blue-700 hover:text-white">
-            Skills
-          </button>
-
-          <button className="transition-all duration-300 rounded-sm mr-2 px-2 py-1 hover:bg-blue-700 hover:text-white">
+          <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
             Work
           </button>
-
-          <button className="transition-all duration-300 px-2 py-1 rounded-sm border border-blue-700 hover:bg-blue-700 hover:text-white">
+          <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
+            Skills
+          </button>
+          <button className="transition-all duration-300 px-2 rounded-sm">
             Contact
           </button>
         </div>
@@ -55,9 +56,9 @@ const Navbar = () => {
             {!isDark && <LightModeIcon />}
             {isDark && <DarkModeIcon />}
           </button> */}
-          {/* <button onClick={showMenuHandler}>
+          <button onClick={showMenuHandler}>
             <MenuIcon />
-          </button> */}
+          </button>
         </div>
       </div>
       {showMenu && (
@@ -74,26 +75,18 @@ const Navbar = () => {
         <div className="px-2 text-right text-lg">
           {/* <CloseIcon onClick={showMenuHandler} /> */}
         </div>
-        {
-          <button className="transition-all duration-300 px-2 py-1 my-1 text-left hover:bg-blue-600 hover:text-white">
-            {/* <LoginIcon className="mr-2" /> Login */}
-          </button>
-        }
-        {
-          <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:bg-blue-600 hover:text-white">
-            {/* <AddBoxIcon className="mr-2" /> Create Account */}
-          </button>
-        }
-        {
-          <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:bg-blue-600 hover:text-white">
-            {/* <AddBoxIcon className="mr-2" /> New Article */}
-          </button>
-        }
-        {
-          <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:bg-blue-600 hover:text-white">
-            {/* <SearchIcon className="mr-2" /> Search */}
-          </button>
-        }
+        <button className="transition-all duration-300 px-2 py-1 my-1 text-left hover:bg-blue-600 hover:text-white">
+          {/* <LoginIcon className="mr-2" /> Login */}
+        </button>
+        <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:bg-blue-600 hover:text-white">
+          {/* <AddBoxIcon className="mr-2" /> Create Account */}
+        </button>
+        <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:bg-blue-600 hover:text-white">
+          {/* <AddBoxIcon className="mr-2" /> New Article */}
+        </button>
+        <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:bg-blue-600 hover:text-white">
+          {/* <SearchIcon className="mr-2" /> Search */}
+        </button>
       </div>
     </Fragment>
   );
