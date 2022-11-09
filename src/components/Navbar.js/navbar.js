@@ -1,25 +1,28 @@
 import { Fragment, useState } from "react";
-// import LightModeIcon from "@mui/icons-material/LightMode";
-// import DarkModeIcon from "@mui/icons-material/DarkMode";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MenuIcon from "@mui/icons-material/Menu";
 import classes from "./navbar.module.css";
+import { modeActions } from "../../store/darkmode";
+import { useSelector, useDispatch } from "react-redux";
 
 const Navbar = () => {
-  // const isDark = useSelector((state) => state.mode.isDark);
+  const isDark = useSelector((state) => state.mode.isDark);
   const [showMenu, setShowMenu] = useState(false);
   const [colorChange, setColorChange] = useState(false);
+  const dispatch = useDispatch();
 
-  // if (!isDark) {
-  //   document.body.classList.remove("bg-gray-800");
-  //   document.documentElement.classList.remove("dark");
-  // } else {
-  //   document.body.classList.add("bg-gray-800");
-  //   document.documentElement.classList.add("dark");
-  // }
+  if (!isDark) {
+    document.body.classList.remove("bg-gray-800");
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.body.classList.add("bg-gray-800");
+    document.documentElement.classList.add("dark");
+  }
 
-  // const darkModeHandler = () => {
-  //   dispatch(modeActions.toggle());
-  // };
+  const darkModeHandler = () => {
+    dispatch(modeActions.toggle());
+  };
 
   const colorChangeHandler = () => {
     if (window.scrollY >= 80) {
@@ -41,10 +44,10 @@ const Navbar = () => {
     <Fragment>
       <div
         className={`${
-          colorChange ? "bg-blue-500" : "bg-white"
+          colorChange ? "bg-sky-200" : "bg-white"
         } transition-all duration-300 sticky top-0 z-10 flex flex-wrap items-center p-2 py-4 pl-4 pr-4 sm:pl-8 sm:pr-8 lg:pl-12 lg:pr-12 dark:bg-gray-900`}
       >
-        <div className="w-fit font-serif text-3xl font-black mr-auto text-gray-700 dark:text-white">
+        <div className="w-fit font-serif text-3xl px-2 font-black mr-auto text-gray-700 dark:text-white">
           Bilal Sajid
         </div>
         <div
@@ -67,10 +70,10 @@ const Navbar = () => {
           </button>
         </div>
         <div className="md:hidden flex w-fit flex-wrap ml-auto justify-center align-middle  text-gray-700 dark:text-white">
-          {/* <button onClick={darkModeHandler} className="p-1">
+          <button onClick={darkModeHandler} className="p-1">
             {!isDark && <LightModeIcon />}
             {isDark && <DarkModeIcon />}
-          </button> */}
+          </button>
           <button onClick={showMenuHandler}>
             <MenuIcon />
           </button>
