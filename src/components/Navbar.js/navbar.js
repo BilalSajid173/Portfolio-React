@@ -7,6 +7,7 @@ import classes from "./navbar.module.css";
 const Navbar = () => {
   // const isDark = useSelector((state) => state.mode.isDark);
   const [showMenu, setShowMenu] = useState(false);
+  const [colorChange, setColorChange] = useState(false);
 
   // if (!isDark) {
   //   document.body.classList.remove("bg-gray-800");
@@ -20,6 +21,16 @@ const Navbar = () => {
   //   dispatch(modeActions.toggle());
   // };
 
+  const colorChangeHandler = () => {
+    if (window.scrollY >= 80) {
+      setColorChange(true);
+    } else {
+      setColorChange(false);
+    }
+  };
+
+  window.addEventListener("scroll", colorChangeHandler);
+
   const showMenuHandler = () => {
     setShowMenu((prev) => {
       return !prev;
@@ -28,7 +39,11 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <div className="sticky top-0 z-10 flex flex-wrap items-center p-2 py-4 pl-4 pr-4 sm:pl-8 sm:pr-8 lg:pl-12 lg:pr-12 bg-white dark:bg-gray-900">
+      <div
+        className={`${
+          colorChange ? "bg-blue-500" : "bg-white"
+        } transition-all duration-300 sticky top-0 z-10 flex flex-wrap items-center p-2 py-4 pl-4 pr-4 sm:pl-8 sm:pr-8 lg:pl-12 lg:pr-12 dark:bg-gray-900`}
+      >
         <div className="w-fit font-serif text-3xl font-black mr-auto text-gray-700 dark:text-white">
           Bilal Sajid
         </div>
@@ -61,6 +76,8 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
+      <div className="h-[120vh]"></div>
       {showMenu && (
         <div
           onClick={showMenuHandler}
