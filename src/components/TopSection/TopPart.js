@@ -5,6 +5,7 @@ import AnimatedLetters from "../AnimatedLetters";
 // import LogoTitle from "../../assets/images/logo-s.png";
 import "./index.scss";
 import lottie from "lottie-web";
+import TypedText from "./TypedText";
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -79,7 +80,7 @@ const Home = () => {
                 idx={22}
               />
             </h1>
-            <h2>Front End Developer / JavaScript</h2>
+            <TypedText />
             {/* <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link> */}
