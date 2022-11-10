@@ -55,8 +55,8 @@ const Home = () => {
   return (
     <>
       <div className="flex flex-wrap justify-center items-center py-5 px-10">
-        <div className="home-page xl:w-[35%] lg:w-[45%] md:w-[55%]">
-          <div className="text-zone flex flex-wrap">
+        <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
+          <div className="text-zone flex flex-wrap flex-col relative">
             <h1 className="md:text-[56px] text-[40px]">
               <span className={letterClass}>H</span>
               <span className={`${letterClass} _12`}>i,</span>
@@ -87,7 +87,7 @@ const Home = () => {
         </div>
         <div
           ref={container}
-          className="mb-10 md:mb-0 w-full container flex flex-wrap justify-center md:my-6 md:h-[30rem] lg:h-[30rem] md:w-[45%] xl:w-[50%] xl:h-[30rem]"
+          className="mb-10 md:mb-0 mt-[2rem] container flex flex-wrap justify-center sm:my-2 w-full sm:w-[45%] xl:w-[50%] h-[20rem] md:h-[25rem] xl:h-[30rem]"
         ></div>
       </div>
     </>

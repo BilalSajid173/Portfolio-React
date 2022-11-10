@@ -82,14 +82,14 @@ const Navbar = () => {
           {!showMenu ? (
             <button
               onClick={showMenuHandler}
-              className="transition-all duration-200 p-2"
+              className="transition-all duration-200"
             >
               <MenuIcon />
             </button>
           ) : (
             <button
               onClick={showMenuHandler}
-              className="transition-all duration-200 p-2"
+              className="transition-all duration-200"
             >
               <CloseIcon />
             </button>

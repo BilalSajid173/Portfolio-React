@@ -11,7 +11,7 @@
     h1 {
       color: #fff;
       line-height: 53px;
-      margin: 0;
+      margin-bottom: 32px;
       font-family: 'Coolvetica';
       font-weight: 400;
   
@@ -31,7 +31,9 @@
         font-family: 'La Belle Aurore', cursive;
         color: #ffd700;
         font-size: 18px;
-        // position: absolute;
+        left:0;
+        bottom: 18px;
+        position: absolute;
         animation: fadeIn 1s 1.7s backwards;
         // opacity: 0.6;
       }
