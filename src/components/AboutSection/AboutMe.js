@@ -1,6 +1,7 @@
 import AnimatedCube from "./AnimatedCube";
 import { useEffect, useState } from "react";
 import AnimatedLetters from "../AnimatedLetters";
+import { motion } from "framer-motion";
 const AboutMe = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
 
@@ -27,23 +28,32 @@ const AboutMe = () => {
               idx={15}
             />
           </h1>
-          <div className="font-sans pr-4">
-            <p className="mb-2">
-              I'm a very ambitious front-end developer looking for a role in an
-              established IT company with the opportunity to work with the
-              latest technologies on challenging and diverse projects.
-            </p>
-            <p className="mb-2">
-              Quis viverra nibh cras pulvinar mattis nunc sed blandit libero.
-              Aenean et tortor at risus viverra adipiscing at in. Blandit cursus
-              risus at ultrices mi tempus. Sagittis purus sit amet volutpat
-              consequat mauris nunc.
-            </p>
-            <p>
-              Blandit cursus risus at ultrices mi tempus. Sagittis purus sit
-              amet volutpat consequat mauris nunc.
-            </p>
-          </div>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{
+              duration: 1.5,
+              ease: "easeInOut",
+              staggerChildren: 0.5,
+            }}
+          >
+            <div className="font-sans pr-4">
+              <p className="mb-2">
+                I'm a very ambitious front-end developer looking for a role in
+                an established IT company with the opportunity to work with the
+                latest technologies on challenging and diverse projects.
+              </p>
+              <p className="mb-2">
+                Quis viverra nibh cras pulvinar mattis nunc sed blandit libero.
+                Aenean et tortor at risus viverra adipiscing at in. Blandit
+                cursus risus at ultrices mi tempus. Sagittis purus sit amet
+                volutpat consequat mauris nunc.
+              </p>
+              <p>
+                Blandit cursus risus at ultrices mi tempus. Sagittis purus sit
+                amet volutpat consequat mauris nunc.
+              </p>
+            </div>
+          </motion.div>
         </div>
         <div className="relative md:w-[45%] lg:w-[35%] h-[28rem] flex flex-wrap justify-center items-center w-full">
           <AnimatedCube />
