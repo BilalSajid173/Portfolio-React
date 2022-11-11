@@ -16,7 +16,10 @@ const AboutMe = () => {
   return (
     <>
       <div className="flex flex-wrap justify-center py-5 md:px-10 px-7">
-        <div className="md:w-[45%] lg:w-[35%] dark:text-white w-full mb-6 md:mb-0">
+        <div
+          id="AboutSection"
+          className="md:w-[45%] lg:w-[35%] dark:text-white w-full mb-6 md:mb-0"
+        >
           <h1 className="font-bold text-4xl mb-8">
             <AnimatedLetters
               letterClass={letterClass}

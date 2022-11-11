@@ -12,7 +12,12 @@ import classes from "./navbar.module.css";
 import { modeActions } from "../../store/darkmode";
 import { useSelector, useDispatch } from "react-redux";
 
-const LinksArray = ["Home", "About", "Work", "Skills"];
+const LinksArray = [
+  { title: "Home", id: "TopSection" },
+  { title: "About", id: "AboutSection" },
+  { title: "Work", id: "WorkSection" },
+  { title: "Skills", id: "SkillSection" },
+];
 
 const Navbar = () => {
   const isDark = useSelector((state) => state.mode.isDark);
@@ -48,6 +53,18 @@ const Navbar = () => {
     });
   };
 
+  const clickHandler = (tag) => {
+    var element = document.getElementById(tag);
+    var headerOffset = 100;
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Fragment>
       <div
@@ -69,8 +86,11 @@ const Navbar = () => {
         >
           {LinksArray.map((link) => {
             return (
-              <button className="transition-all duration-300 px-2 mr-2 rounded-sm">
-                {link}
+              <button
+                onClick={clickHandler.bind(null, link.id)}
+                className="transition-all duration-300 px-2 mr-2 rounded-sm"
+              >
+                {link.title}
               </button>
             );
           })}
@@ -101,13 +121,22 @@ const Navbar = () => {
           showMenu ? "-translate-x-0" : "-translate-x-full"
         } py-3 flex flex-col w-[4rem] md:hidden items-center justify-center top-56 opacity-80 left-0 fixed h-[18rem] bg-white z-20 ml-auto dark:bg-[#1b3c8a] text-gray-700 dark:text-white`}
       >
-        <button className="transition-all duration-300 px-2 py-1 my-1 text-left hover:text-white">
+        <button
+          onClick={clickHandler.bind(null, "TopSection")}
+          className="transition-all duration-300 px-2 py-1 my-1 text-left hover:text-white"
+        >
           <HomeIcon fontSize="large" />
         </button>
-        <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white">
+        <button
+          onClick={clickHandler.bind(null, "AboutSection")}
+          className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
+        >
           <PersonIcon fontSize="large" />
         </button>
-        <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white">
+        <button
+          onClick={clickHandler.bind(null, "WorkSection")}
+          className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
+        >
           <LightbulbIcon fontSize="large" />
         </button>
         <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white">

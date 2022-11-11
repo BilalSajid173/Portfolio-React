@@ -56,7 +56,10 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center items-center pt-10 md:pt-0 py-5 md:px-10 px-7 dark:bg-[#0a0c49]">
+      <div
+        id="TopSection"
+        className="flex flex-wrap justify-center items-center pt-10 md:pt-0 py-5 md:px-10 px-7 dark:bg-[#0a0c49]"
+      >
         <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
           <div className="text-zone flex flex-wrap flex-col relative">
             <h1 className="md:text-[56px] text-[40px]">
