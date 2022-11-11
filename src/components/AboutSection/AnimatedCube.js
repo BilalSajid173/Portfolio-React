@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import {
-  faAngular,
+  faNodeJs,
   faCss3,
   faGitAlt,
   faHtml5,
@@ -31,9 +31,12 @@ const AnimatedCube = () => {
             </div> */}
 
       <div className="stage-cube-cont">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
         <div className="cubespinner">
           <div className="face1">
-            <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+            <FontAwesomeIcon icon={faNodeJs} color="#609b56" />
           </div>
           <div className="face2">
             <FontAwesomeIcon icon={faHtml5} color="#F06529" />
