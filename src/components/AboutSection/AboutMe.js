@@ -1,3 +1,5 @@
+import AnimatedCube from "./AnimatedCube";
+
 const AboutMe = () => {
   return (
     <>
@@ -5,7 +7,9 @@ const AboutMe = () => {
         <div>
           <h1 className="font-bold text-2xl">About Me</h1>
         </div>
-        <div></div>
+        <div className="relative w-[50%] h-[30rem]">
+          <AnimatedCube />
+        </div>
       </div>
     </>
   );
