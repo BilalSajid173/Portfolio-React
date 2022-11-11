@@ -6,6 +6,7 @@ import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
 import lottie from "lottie-web";
 import TypedText from "./TypedText";
+import WavePattern from "./Waves";
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -55,7 +56,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center items-center py-5 px-10">
+      <div className="flex flex-wrap justify-center items-center py-5 px-10 dark:bg-[#0a0c49]">
         <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
           <div className="text-zone flex flex-wrap flex-col relative">
             <h1 className="md:text-[56px] text-[40px]">
@@ -91,6 +92,7 @@ const Home = () => {
           className="mb-10 md:mb-0 mt-[2rem] container flex flex-wrap justify-center sm:my-2 w-full sm:w-[45%] xl:w-[50%] h-[20rem] md:h-[25rem] xl:h-[30rem]"
         ></div>
       </div>
+      <WavePattern />
     </>
   );
 };
