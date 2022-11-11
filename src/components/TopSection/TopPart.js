@@ -56,7 +56,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center items-center py-5 px-10 dark:bg-[#0a0c49]">
+      <div className="flex flex-wrap justify-center items-center pt-10 md:pt-0 py-5 md:px-10 px-7 dark:bg-[#0a0c49]">
         <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
           <div className="text-zone flex flex-wrap flex-col relative">
             <h1 className="md:text-[56px] text-[40px]">
@@ -89,7 +89,7 @@ const Home = () => {
         </div>
         <div
           ref={container}
-          className="mb-10 md:mb-0 mt-[2rem] container flex flex-wrap justify-center sm:my-2 w-full sm:w-[45%] xl:w-[50%] h-[20rem] md:h-[25rem] xl:h-[30rem]"
+          className="mb-5 md:mb-0 mt-[2rem] container flex flex-wrap justify-center sm:my-2 w-full sm:w-[45%] xl:w-[50%] h-[20rem] md:h-[25rem] xl:h-[30rem]"
         ></div>
       </div>
       <WavePattern />

@@ -4,7 +4,7 @@ const WavePattern = () => {
   return (
     <>
       <div>
-        <div className="relative h-[12rem]">
+        <div className="relative h-[10rem] md:h-[12rem]">
           <div className={`${classes["custom-shape-divider-top-1668166886"]}`}>
             <svg
               data-name="Layer 1"

@@ -15,8 +15,8 @@ const AboutMe = () => {
   }, []);
   return (
     <>
-      <div className="flex flex-wrap justify-center py-10">
-        <div className="md:w-[45%] lg:w-[35%] dark:text-white w-[90%] mb-6 md:mb-0">
+      <div className="flex flex-wrap justify-center py-5 md:px-10 px-7">
+        <div className="md:w-[45%] lg:w-[35%] dark:text-white w-full mb-6 md:mb-0">
           <h1 className="font-bold text-4xl mb-8">
             <AnimatedLetters
               letterClass={letterClass}
@@ -31,17 +31,18 @@ const AboutMe = () => {
               latest technologies on challenging and diverse projects.
             </p>
             <p className="mb-2">
-              I'm quiet confident, naturally curious, and perpetually working on
-              improving my chops one design problem at a time.
+              Quis viverra nibh cras pulvinar mattis nunc sed blandit libero.
+              Aenean et tortor at risus viverra adipiscing at in. Blandit cursus
+              risus at ultrices mi tempus. Sagittis purus sit amet volutpat
+              consequat mauris nunc.
             </p>
             <p>
-              If I need to define myself in one sentence that would be a family
-              person, father of a beautiful daughter, a sports fanatic,
-              photography enthusiast, and tech-obsessed!!!
+              Blandit cursus risus at ultrices mi tempus. Sagittis purus sit
+              amet volutpat consequat mauris nunc.
             </p>
           </div>
         </div>
-        <div className="relative md:w-[45%] lg:w-[35%] h-[28rem] flex flex-wrap justify-center items-center w-[90%]">
+        <div className="relative md:w-[45%] lg:w-[35%] h-[28rem] flex flex-wrap justify-center items-center w-full">
           <AnimatedCube />
         </div>
       </div>
