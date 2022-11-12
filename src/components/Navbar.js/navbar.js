@@ -15,7 +15,7 @@ import { useSelector, useDispatch } from "react-redux";
 const LinksArray = [
   { title: "Home", id: "TopSection" },
   { title: "About", id: "AboutSection" },
-  { title: "Work", id: "WorkSection" },
+  { title: "Work", id: "ProjectSection" },
   { title: "Skills", id: "SkillSection" },
 ];
 
@@ -134,7 +134,7 @@ const Navbar = () => {
           <PersonIcon fontSize="large" />
         </button>
         <button
-          onClick={clickHandler.bind(null, "WorkSection")}
+          onClick={clickHandler.bind(null, "ProjectSection")}
           className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
         >
           <LightbulbIcon fontSize="large" />

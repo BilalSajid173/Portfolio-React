@@ -2,6 +2,13 @@ import BlogifyImage from "../../assets/images/Blogify.png";
 import KonnectImage from "../../assets/images/Konnect.png";
 import FoodbookImage from "../../assets/images/Foodbook.png";
 import PortfolioImage from "../../assets/images/Portfolio.png";
+import {
+  faNodeJs,
+  faCss3,
+  faHtml5,
+  faJsSquare,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Projects = [
   {
@@ -11,6 +18,10 @@ const Projects = [
     codeLink: "https://github.com/BilalSajid173/Blog-app-frontend",
     projectLink: "https://blogify-app.vercel.app/",
     img: BlogifyImage,
+    techStack: [
+      { icon: faReact, color: "#5ED4F4" },
+      { icon: faJsSquare, color: "#EFD81D" },
+    ],
   },
   {
     id: 2,
@@ -19,6 +30,10 @@ const Projects = [
     codeLink: "https://github.com/BilalSajid173/chat-app-frontend",
     projectLink: "https://konnect-social-app.vercel.app/",
     img: KonnectImage,
+    techStack: [
+      { icon: faReact, color: "#5ED4F4" },
+      { icon: faNodeJs, color: "#609b56" },
+    ],
   },
   {
     id: 3,
@@ -27,6 +42,11 @@ const Projects = [
     codeLink: "https://github.com/BilalSajid173/foodbook",
     projectLink: "https://fierce-waters-21031.herokuapp.com/",
     img: FoodbookImage,
+    techStack: [
+      { icon: faNodeJs, color: "#609b56" },
+      { icon: faHtml5, color: "#F06529" },
+      { icon: faCss3, color: "#28A4D9" },
+    ],
   },
   {
     id: 4,
@@ -35,6 +55,10 @@ const Projects = [
     codeLink: "https://github.com/BilalSajid173/Blog-app-frontend",
     projectLink: "https://blogify-app.vercel.app/",
     img: PortfolioImage,
+    techStack: [
+      { icon: faReact, color: "#5ED4F4" },
+      { icon: faCss3, color: "#28A4D9" },
+    ],
   },
 ];
 

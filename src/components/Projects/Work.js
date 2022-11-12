@@ -4,6 +4,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion } from "framer-motion";
 import "./Work.scss";
 import Projects from "./Projects";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Work = () => {
   const cardVariants = {
@@ -14,14 +15,17 @@ const Work = () => {
       y: 0,
       transition: {
         type: "spring",
-        bounce: 0.5,
+        bounce: 0.3,
         duration: 0.8,
       },
     },
   };
   return (
     <>
-      <h2 className="font-bold text-center text-4xl dark:text-white my-[2rem]">
+      <h2
+        id="ProjectSection"
+        className="font-bold text-center text-4xl dark:text-white my-[2rem]"
+      >
         My Projects
       </h2>
       <div className="flex flex-wrap justify-center items-center">
@@ -74,9 +78,19 @@ const Work = () => {
                     </a>
                   </motion.div>
                 </div>
-
+                <div className="mt-4 flex flex-wrap justify-center">
+                  {work.techStack.map((tech) => {
+                    return (
+                      <FontAwesomeIcon
+                        icon={tech.icon}
+                        color={tech.color}
+                        className="text-4xl mx-2"
+                      />
+                    );
+                  })}
+                </div>
                 <div className="flex justify-center items-center flex-col w-full relative p-[0.5rem]">
-                  <h2 className="mt-[1rem] font-bold text-lg">{work.title}</h2>
+                  <h2 className=" font-bold text-lg">{work.title}</h2>
                   <p className="p-text" style={{ marginTop: 10 }}>
                     {work.description}
                   </p>
