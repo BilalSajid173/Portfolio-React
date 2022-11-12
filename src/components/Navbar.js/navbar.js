@@ -16,7 +16,7 @@ const LinksArray = [
   { title: "Home", id: "TopSection" },
   { title: "About", id: "AboutSection" },
   { title: "Work", id: "ProjectSection" },
-  { title: "Skills", id: "SkillSection" },
+  { title: "Skills", id: "SkillsSection" },
 ];
 
 const Navbar = () => {
@@ -139,7 +139,10 @@ const Navbar = () => {
         >
           <LightbulbIcon fontSize="large" />
         </button>
-        <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white">
+        <button
+          onClick={clickHandler.bind(null, "SkillsSection")}
+          className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
+        >
           <RemoveRedEyeIcon fontSize="large" />
         </button>
         <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white">

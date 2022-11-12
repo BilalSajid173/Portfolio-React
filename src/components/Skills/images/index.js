@@ -5,7 +5,7 @@ import herokuimg from "./heroku.png";
 import htmlimg from "./html.png";
 import javascriptimg from "./javascript.png";
 import materialuiimg from "./material_ui.png";
-import mongodbimg from "./mongodb.png";
+import mongodbimg from "./mongodb.webp";
 import mysqlimg from "./mysql.png";
 import netlifyimg from "./netlify.png";
 import nodeimg from "./node.png";
@@ -26,7 +26,7 @@ const images = [
   { src: herokuimg, name: "Heroku" },
   { src: htmlimg, name: "HTML5" },
   { src: javascriptimg, name: "Javascript" },
-  { src: materialuiimg, name: "Material UI" },
+  // { src: materialuiimg, name: "Material UI" },
   { src: mongodbimg, name: "Mongodb" },
   { src: mysqlimg, name: "MySQL" },
 //   { src: netlifyimg, name: "Netlify" },
