@@ -22,3 +22,14 @@ code {
 textarea {
   resize: none;
 }
+
+.progress-bar {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  z-index: 100;
+  background: #43408e;
+  transform-origin: 0%;
+}
