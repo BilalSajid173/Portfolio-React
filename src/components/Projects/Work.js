@@ -13,6 +13,12 @@ const works = [
     title: "Blogify",
     description: "blogify App",
   },
+  {
+    projectLink: "https://www.google.com/",
+    codeLink: "https://www.github.com/",
+    title: "Blogify",
+    description: "blogify App",
+  },
 ];
 
 const Work = () => {

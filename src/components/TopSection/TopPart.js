@@ -63,7 +63,7 @@ const Home = () => {
         <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
           <div className="text-zone flex flex-wrap flex-col relative">
             <h1 className="md:text-[56px] text-[40px]">
-              <span className={letterClass}>H</span>
+              <span className={`${letterClass} _11`}>H</span>
               <span className={`${letterClass} _12`}>i,</span>
               <br />
               <span className={`${letterClass} _13`}>I</span>
