@@ -17,7 +17,7 @@ const ContactMe = () => {
   }, []);
   return (
     <>
-      <div className="flex flex-wrap justify-center items-center my-10">
+      <div className="flex flex-wrap justify-center items-center my-20">
         <ContactForm />
         <div
           ref={container}

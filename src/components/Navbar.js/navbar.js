@@ -94,7 +94,10 @@ const Navbar = () => {
               </button>
             );
           })}
-          <button className="transition-all duration-300 px-2 rounded-sm">
+          <button
+            onClick={clickHandler.bind(null, "ContactSection")}
+            className="transition-all duration-300 px-2 rounded-sm"
+          >
             Contact
           </button>
         </div>
@@ -145,7 +148,10 @@ const Navbar = () => {
         >
           <RemoveRedEyeIcon fontSize="large" />
         </button>
-        <button className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white">
+        <button
+          onClick={clickHandler.bind(null, "ContactSection")}
+          className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
+        >
           <MailOutlineIcon fontSize="large" />
         </button>
       </div>
