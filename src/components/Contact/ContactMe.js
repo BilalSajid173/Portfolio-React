@@ -21,7 +21,7 @@ const ContactMe = () => {
         <ContactForm />
         <div
           ref={container}
-          className="mb-5 md:mb-0 mt-[2rem] container flex flex-wrap justify-center sm:my-2 w-full sm:w-[45%] xl:w-[45%] h-[20rem] md:h-[25rem] xl:h-[30rem]"
+          className="hidden mb-5 md:mb-0 mt-[2rem] container md:flex flex-wrap justify-center sm:my-2 w-full md:w-[45%] lg:w-[40%] h-[20rem] md:h-[25rem] xl:h-[30rem]"
         ></div>
       </div>
     </>
