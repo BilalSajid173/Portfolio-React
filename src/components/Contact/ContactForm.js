@@ -1,12 +1,19 @@
-import { useState, useReducer } from "react";
+import { useReducer, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const initialState = {
   firstName: "",
   lastName: "",
   email: "",
   phone: "",
-  msg: "",
+  message: "",
 };
+
+const YOUR_SERVICE_ID = "service_7oqucil";
+const YOUR_TEMPLATE_ID = "template_5o4uoc6";
+const YOUR_PUBLIC_KEY = "VwjKuMO31NSEDRdQi";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -19,14 +26,59 @@ const reducer = (state, action) => {
     case "phone":
       return { ...state, phone: action.value };
     case "msg":
-      return { ...state, msg: action.value };
+      return { ...state, message: action.value };
     default:
       return state;
   }
 };
 
 const ContactForm = () => {
+  const form = useRef();
   const [state, dispatch] = useReducer(reducer, initialState);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (
+      state.firstName.trim().length === 0 ||
+      state.lastName.trim().length === 0 ||
+      state.phone.trim().length === 0 ||
+      state.message.trim().length === 0
+    ) {
+      toast.error("Please complete the form.");
+      return;
+    }
+
+    if (!state.email.trim().includes("@")) {
+      toast.error("Please Enter a valid email!");
+      return;
+    }
+    emailjs
+      .sendForm(
+        YOUR_SERVICE_ID,
+        YOUR_TEMPLATE_ID,
+        form.current,
+        YOUR_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          toast.success("Email Sent Successfully");
+          dispatch({ type: "firstName", value: "" });
+          dispatch({ type: "lastName", value: "" });
+          dispatch({ type: "email", value: "" });
+          dispatch({ type: "phone", value: "" });
+          dispatch({ type: "msg", value: "" });
+        },
+        (error) => {
+          toast.error("Error Sending Email!");
+          dispatch({ type: "firstName", value: "" });
+          dispatch({ type: "lastName", value: "" });
+          dispatch({ type: "email", value: "" });
+          dispatch({ type: "phone", value: "" });
+          dispatch({ type: "msg", value: "" });
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <>
       <div class="dark:text-white md:px-10 px-7 dark:bg-[#111729] md:w-[45%] w-full lg:w-[40%]">
@@ -34,7 +86,7 @@ const ContactForm = () => {
           <h4 id="ContactSection" class="text-3xl">
             Contact Me
           </h4>
-          <form>
+          <form ref={form} onSubmit={sendEmail} autoComplete="off">
             <div class="grid grid-cols-2 gap-5">
               <input
                 onChange={(e) => {
@@ -43,6 +95,8 @@ const ContactForm = () => {
                 type="text"
                 class=" px-4 py-2 focus:outline-none dark:bg-[#372656] rounded-sm"
                 placeholder="First Name"
+                name="firstName"
+                value={state.firstName}
               />
               <input
                 onChange={(e) => {
@@ -51,6 +105,8 @@ const ContactForm = () => {
                 type="text"
                 class=" px-4 py-2 focus:outline-none dark:bg-[#372656] rounded-sm"
                 placeholder="Last Name"
+                name="lastName"
+                value={state.lastName}
               />
               <input
                 onChange={(e) => {
@@ -59,6 +115,8 @@ const ContactForm = () => {
                 type="email"
                 class="px-4 py-2 focus:outline-none col-span-2 dark:bg-[#372656] rounded-sm"
                 placeholder="Email"
+                name="email"
+                value={state.email}
               />
               <input
                 onChange={(e) => {
@@ -67,6 +125,8 @@ const ContactForm = () => {
                 type="tel"
                 class="px-4 py-2 focus:outline-none col-span-2 dark:bg-[#372656] rounded-sm"
                 placeholder="Phone"
+                name="phone"
+                value={state.phone}
               />
               <textarea
                 onChange={(e) => {
@@ -76,6 +136,8 @@ const ContactForm = () => {
                 rows="6"
                 class="px-4 py-2 focus:outline-none col-span-2 dark:bg-[#372656] rounded-sm"
                 placeholder="Write your message..."
+                name="message"
+                value={state.message}
               ></textarea>
             </div>
             <input
