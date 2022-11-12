@@ -1,7 +1,8 @@
-import { useReducer, useRef } from "react";
+import { useReducer, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ThreeDotsWave from "../Loader/ThreeDotsWave";
 
 const initialState = {
   firstName: "",
@@ -35,6 +36,7 @@ const reducer = (state, action) => {
 const ContactForm = () => {
   const form = useRef();
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [isLoading, setIsLoading] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -52,6 +54,7 @@ const ContactForm = () => {
       toast.error("Please Enter a valid email!");
       return;
     }
+    setIsLoading(true);
     emailjs
       .sendForm(
         YOUR_SERVICE_ID,
@@ -61,6 +64,7 @@ const ContactForm = () => {
       )
       .then(
         (result) => {
+          setIsLoading(false);
           toast.success("Email Sent Successfully");
           dispatch({ type: "firstName", value: "" });
           dispatch({ type: "lastName", value: "" });
@@ -81,6 +85,11 @@ const ContactForm = () => {
   };
   return (
     <>
+      {isLoading && (
+        <div className="w-11/12 h-5/6 flex justify-center items-center absolute">
+          <ThreeDotsWave />
+        </div>
+      )}
       <div class="dark:text-white md:px-10 px-7 dark:bg-[#111729] md:w-[45%] w-full lg:w-[40%]">
         <div class="md:p-5 space-y-5">
           <h4 id="ContactSection" class="text-3xl">
