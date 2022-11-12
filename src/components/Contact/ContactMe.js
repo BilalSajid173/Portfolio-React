@@ -1,5 +1,6 @@
 import lottie from "lottie-web";
 import { useRef, useEffect } from "react";
+import ContactForm from "./ContactForm";
 
 const ContactMe = () => {
   const container = useRef(null);
@@ -16,10 +17,13 @@ const ContactMe = () => {
   }, []);
   return (
     <>
-      <div
-        ref={container}
-        className="mb-5 md:mb-0 mt-[2rem] container flex flex-wrap justify-center sm:my-2 w-full sm:w-[45%] xl:w-[50%] h-[20rem] md:h-[25rem] xl:h-[30rem]"
-      ></div>
+      <div className="flex flex-wrap justify-center items-center my-10">
+        <ContactForm />
+        <div
+          ref={container}
+          className="mb-5 md:mb-0 mt-[2rem] container flex flex-wrap justify-center sm:my-2 w-full sm:w-[45%] xl:w-[45%] h-[20rem] md:h-[25rem] xl:h-[30rem]"
+        ></div>
+      </div>
     </>
   );
 };
