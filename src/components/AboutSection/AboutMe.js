@@ -21,21 +21,23 @@ const AboutMe = () => {
           id="AboutSection"
           className="md:w-[45%] lg:w-[35%] dark:text-white w-full mb-6 md:mb-0"
         >
-          <h1 className="font-bold text-4xl mb-8">
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={["A", "b", "o", "u", "t", " ", "m", "e"]}
-              idx={15}
-            />
-          </h1>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
+            viewport={{ once: true }}
             transition={{
-              duration: 1.5,
+              duration: 2,
               ease: "easeInOut",
               staggerChildren: 0.5,
             }}
           >
+            <h1 className="font-bold text-4xl mb-8">
+              <AnimatedLetters
+                letterClass={letterClass}
+                strArray={["A", "b", "o", "u", "t", " ", "m", "e"]}
+                idx={15}
+              />
+            </h1>
+
             <div className="font-sans pr-4">
               <p className="mb-2">
                 I'm a very ambitious front-end developer looking for a role in
