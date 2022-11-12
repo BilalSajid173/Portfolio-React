@@ -10,6 +10,7 @@ import WavePattern from "./Waves";
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
+  const [typedTextVisible, setTypedTextVisible] = useState(false);
 
   const container = useRef(null);
   useEffect(() => {
@@ -47,8 +48,9 @@ const Home = () => {
   useEffect(() => {
     const animation = () => {
       setTimeout(() => {
+        setTypedTextVisible(true);
         setLetterClass("text-animate-hover");
-      }, 4000);
+      }, 1400);
     };
 
     animation();
@@ -61,7 +63,7 @@ const Home = () => {
         className="flex flex-wrap justify-center items-center pt-10 md:pt-0 py-5 md:px-10 px-7 dark:bg-[#0a0c49]"
       >
         <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
-          <div className="text-zone flex flex-wrap flex-col relative">
+          <div className="text-zone flex flex-wrap flex-col relative min-h-[13.8rem]">
             <h1 className="md:text-[56px] text-[40px]">
               <span className={`${letterClass} _11`}>H</span>
               <span className={`${letterClass} _12`}>i,</span>
@@ -84,7 +86,7 @@ const Home = () => {
                 idx={22}
               />
             </h1>
-            <TypedText />
+            {typedTextVisible && <TypedText />}
             {/* <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link> */}
