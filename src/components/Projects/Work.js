@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LinkIcon from "@mui/icons-material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import AnimatedLetters from "../AnimatedLetters";
 import { motion } from "framer-motion";
 import "./Work.scss";
 import Projects from "./Projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Work = () => {
+  const [showArrow, setShowArrow] = useState(false);
   const cardVariants = {
     offscreen: {
       y: 300,
@@ -20,6 +22,25 @@ const Work = () => {
       },
     },
   };
+  const [letterClass, setLetterClass] = useState("text-animate");
+
+  useEffect(() => {
+    const animation = () => {
+      setTimeout(() => {
+        setLetterClass("text-animate-hover");
+      }, 4000);
+    };
+
+    animation();
+  }, []);
+
+  const hoverHandler = () => {
+    setShowArrow(true);
+  };
+
+  const leaveHandler = () => {
+    setShowArrow(false);
+  };
   return (
     <>
       <div className="md:px-10 px-7 py-10 flex items-center justify-center flex-col">
@@ -27,7 +48,11 @@ const Work = () => {
           id="ProjectSection"
           className="font-bold text-center text-4xl dark:text-white my-[2rem]"
         >
-          My Projects
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={["M", "y", " ", "P", "r", "o", "j", "e", "c", "t", "s"]}
+            idx={15}
+          />
         </h2>
         <div className="flex flex-wrap justify-center items-center w-full md:w-[95%] lg:w-[85%]">
           {Projects.map((work, index) => (
@@ -111,8 +136,12 @@ const Work = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <button className="transition-all duration-200 p-2 px-4 border-2 rounded-md border-blue-700 dark:text-gray-200 mt-4 hover:bg-blue-700">
-            More Projects -&gt;
+          <button
+            onMouseOver={hoverHandler}
+            onMouseLeave={leaveHandler}
+            className="transition-all duration-300 ease-in p-2 px-4 border-2 rounded-md border-blue-700 dark:text-gray-200 mt-4 hover:bg-blue-700"
+          >
+            More Projects {showArrow && "->"}
           </button>
         </a>
       </div>
