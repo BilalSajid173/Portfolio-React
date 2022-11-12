@@ -64,7 +64,7 @@ const Work = () => {
             >
               <motion.div variants={cardVariants}>
                 <div
-                  className="flex flex-col md:m-[1rem] md:w-[290px] lg:w-[350px] p-[1rem] rounded-sm bg-gray-200 dark:bg-[#372656] hover:shadow-lg dark:text-gray-200 transition-all duration-300 ease-in"
+                  className="flex flex-col md:m-[1rem] md:w-[290px] lg:w-[350px] p-[1rem] rounded-sm bg-purple-300 dark:bg-[#372656] hover:shadow-lg dark:text-gray-200 transition-all duration-300 ease-in"
                   key={index}
                 >
                   <div className="w-full h-[230px] relative flex justify-center items-center">
@@ -139,7 +139,7 @@ const Work = () => {
           <button
             onMouseOver={hoverHandler}
             onMouseLeave={leaveHandler}
-            className="transition-all duration-300 ease-in p-2 px-4 border-2 rounded-md border-blue-700 dark:text-gray-200 mt-4 hover:bg-blue-700"
+            className=" hover:text-white p-2 px-4 border-2 rounded-md border-blue-700 dark:text-gray-200 mt-4 hover:bg-blue-700"
           >
             More Projects {showArrow && "->"}
           </button>

@@ -27,9 +27,11 @@ const Navbar = () => {
 
   if (!isDark) {
     document.body.classList.remove(classes.dark);
+    document.body.classList.add("bg-blue-200");
     document.documentElement.classList.remove("dark");
   } else {
     document.body.classList.add(classes.dark);
+    document.body.classList.remove("bg-blue-200");
     document.documentElement.classList.add("dark");
   }
 
@@ -70,7 +72,7 @@ const Navbar = () => {
       <div
         className={`${
           colorChange
-            ? "bg-sky-200 dark:bg-[#182747]"
+            ? "bg-sky-400 dark:bg-[#182747]"
             : "bg-[#888cea] dark:bg-[#0a0c49]"
         } transition-all duration-300 sticky top-0 z-10 flex flex-wrap items-center p-4 sm:px-8`}
       >

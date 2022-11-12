@@ -111,7 +111,7 @@ const Home = () => {
               {typedTextVisible && (
                 <button
                   onClick={onButtonClick}
-                  className="dark:text-white p-2 border-2 mt-4 border-green-500 hover:bg-green-500"
+                  className="dark:text-white p-2 border-2 mt-4 border-blue-700 hover:bg-blue-700 hover:text-white dark:border-green-500 dark:hover:bg-green-500"
                 >
                   Download Resume
                 </button>
