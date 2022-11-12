@@ -7,6 +7,7 @@ import "./index.scss";
 import lottie from "lottie-web";
 import TypedText from "./TypedText";
 import WavePattern from "./Waves";
+// import Resume from "../../../Bilal_Sajid.pdf";
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -56,6 +57,21 @@ const Home = () => {
     animation();
   }, []);
 
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("Bilal_Sajid.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Resume.pdf";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <>
       <div
@@ -63,7 +79,7 @@ const Home = () => {
         className="flex flex-wrap justify-center items-center pt-10 md:pt-0 py-5 md:px-10 px-7 dark:bg-[#0a0c49]"
       >
         <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
-          <div className="text-zone flex flex-wrap flex-col relative min-h-[13.8rem]">
+          <div className="text-zone flex flex-wrap flex-col relative min-h-[17.8rem]">
             <h1 className="md:text-[56px] text-[40px]">
               <span className={`${letterClass} _11`}>H</span>
               <span className={`${letterClass} _12`}>i,</span>
@@ -90,6 +106,17 @@ const Home = () => {
             {/* <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link> */}
+
+            <div>
+              {typedTextVisible && (
+                <button
+                  onClick={onButtonClick}
+                  className="dark:text-white p-2 border-2 mt-4 border-green-500 hover:bg-green-500"
+                >
+                  Download Resume
+                </button>
+              )}
+            </div>
           </div>
         </div>
         <div

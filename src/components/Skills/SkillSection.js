@@ -44,7 +44,7 @@ const SkillSection = () => {
           >
             <h2
               id="SkillsSection"
-              className="font-bold text-4xl dark:text-white my-[2rem]"
+              className="font-bold text-4xl dark:text-white mb-[2rem] mt-[0.5rem]"
             >
               <AnimatedLetters
                 letterClass={letterClass}
