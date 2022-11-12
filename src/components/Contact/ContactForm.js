@@ -102,7 +102,7 @@ const ContactForm = () => {
                   dispatch({ type: "firstName", value: e.target.value });
                 }}
                 type="text"
-                class=" px-4 py-2 focus:outline-none dark:bg-[#372656] rounded-sm"
+                class=" px-4 py-2 focus:outline-none bg-blue-100 dark:bg-[#372656] rounded-sm"
                 placeholder="First Name"
                 name="firstName"
                 value={state.firstName}
@@ -112,7 +112,7 @@ const ContactForm = () => {
                   dispatch({ type: "lastName", value: e.target.value });
                 }}
                 type="text"
-                class=" px-4 py-2 focus:outline-none dark:bg-[#372656] rounded-sm"
+                class=" px-4 py-2 focus:outline-none bg-blue-100 dark:bg-[#372656] rounded-sm"
                 placeholder="Last Name"
                 name="lastName"
                 value={state.lastName}
@@ -122,7 +122,7 @@ const ContactForm = () => {
                   dispatch({ type: "email", value: e.target.value });
                 }}
                 type="email"
-                class="px-4 py-2 focus:outline-none col-span-2 dark:bg-[#372656] rounded-sm"
+                class="px-4 py-2 focus:outline-none bg-blue-100 col-span-2 dark:bg-[#372656] rounded-sm"
                 placeholder="Email"
                 name="email"
                 value={state.email}
@@ -132,7 +132,7 @@ const ContactForm = () => {
                   dispatch({ type: "phone", value: e.target.value });
                 }}
                 type="tel"
-                class="px-4 py-2 focus:outline-none col-span-2 dark:bg-[#372656] rounded-sm"
+                class="px-4 py-2 focus:outline-none bg-blue-100 col-span-2 dark:bg-[#372656] rounded-sm"
                 placeholder="Phone"
                 name="phone"
                 value={state.phone}
@@ -143,7 +143,7 @@ const ContactForm = () => {
                 }}
                 cols="10"
                 rows="6"
-                class="px-4 py-2 focus:outline-none col-span-2 dark:bg-[#372656] rounded-sm"
+                class="px-4 py-2 focus:outline-none bg-blue-100 col-span-2 dark:bg-[#372656] rounded-sm"
                 placeholder="Write your message..."
                 name="message"
                 value={state.message}
