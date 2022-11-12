@@ -31,7 +31,7 @@ const SkillSection = () => {
 
   return (
     <>
-      <div className="md:px-10 px-7 py-10 flex flex-wrap justify-center h-[50rem]">
+      <div className="md:px-10 px-7 py-10 flex flex-wrap justify-center">
         <div className="md:w-[40%] lg:w-[35%] dark:text-white w-full mb-6 md:mb-0 lg:mr-4">
           <motion.div
             whileInView={{ opacity: [0, 1] }}

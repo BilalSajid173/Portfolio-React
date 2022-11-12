@@ -3,6 +3,7 @@ import TopSection from "../components/TopSection/TopPart";
 import AboutMe from "../components/AboutSection/AboutMe";
 import Work from "../components/Projects/Work";
 import SkillSection from "../components/Skills/SkillSection";
+import ContactMe from "../components/Contact/ContactMe";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <AboutMe />
       <Work />
       <SkillSection />
+      <ContactMe />
     </>
   );
 };
