@@ -9,8 +9,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.scss";
+import { useSelector } from "react-redux";
 
 const AnimatedCube = () => {
+  const isDark = useSelector((state) => state.mode.isDark);
   return (
     <>
       {/*
@@ -35,22 +37,22 @@ const AnimatedCube = () => {
         <div id="stars2"></div>
         <div id="stars3"></div>
         <div className="cubespinner">
-          <div className="face1">
+          <div className={`face1 ${!isDark ? "darkcubecontainerdiv" : ""}`}>
             <FontAwesomeIcon icon={faNodeJs} color="#609b56" />
           </div>
-          <div className="face2">
+          <div className={`face2 ${!isDark ? "darkcubecontainerdiv" : ""}`}>
             <FontAwesomeIcon icon={faHtml5} color="#F06529" />
           </div>
-          <div className="face3">
+          <div className={`face3 ${!isDark ? "darkcubecontainerdiv" : ""}`}>
             <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
           </div>
-          <div className="face4">
+          <div className={`face4 ${!isDark ? "darkcubecontainerdiv" : ""}`}>
             <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
           </div>
-          <div className="face5">
+          <div className={`face5 ${!isDark ? "darkcubecontainerdiv" : ""}`}>
             <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
           </div>
-          <div className="face6">
+          <div className={`face6 ${!isDark ? "darkcubecontainerdiv" : ""}`}>
             <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
           </div>
         </div>

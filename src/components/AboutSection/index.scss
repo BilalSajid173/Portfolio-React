@@ -57,6 +57,12 @@
       color: #ec4d28;
     }
   }
+
+  .darkcubecontainerdiv{
+    border: 1px solid rgb(163, 159, 202) !important;
+    background: rgb(176, 181, 207) !important;
+    box-shadow: 0 0 20px 0px rgb(172, 161, 202) !important;
+  }
   
   @keyframes spincube {
     from,
