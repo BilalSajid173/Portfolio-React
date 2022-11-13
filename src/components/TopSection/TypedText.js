@@ -3,9 +3,9 @@ import classes from "./TypedText.module.css";
 import useTypedText from "../../hooks/useTypedText";
 
 const typedtextarray = [
+  "Full Stack Developer",
   "UI/UX Designer",
   "Tech Enthusiast",
-  "Full Stack Developer",
 ];
 
 const TypedText = () => {

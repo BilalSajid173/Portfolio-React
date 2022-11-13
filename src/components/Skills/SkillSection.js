@@ -54,16 +54,15 @@ const SkillSection = () => {
             </h2>
             <div className="font-sans">
               <p className="mb-4">
-                I'm a very ambitious front-end developer looking for a role in
-                an established IT company with the opportunity to work with the
-                latest technologies on challenging and diverse projects.
+                I have worked with a lot of different libraries and frameworks,
+                both for backend and frontend. My primary expertise is in the
+                Javascript/Typescript environment. For Backend, I am well-versed
+                with Nodejs, Nextjs, Firebase and DRF. Frontend libraries
+                include Reactjs, SolidJs, React-Native etc. Material UI,
+                Tailwind CSS, Bootstrap are some of the UI libraries I am
+                familiar with.
               </p>
-              <p className="mb-4">
-                Quis viverra nibh cras pulvinar mattis nunc sed blandit libero.
-                Aenean et tortor at risus viverra adipiscing at in. Blandit
-                cursus risus at ultrices mi tempus. Sagittis purus sit amet
-                volutpat consequat mauris nunc.
-              </p>
+              <p className="mb-4"></p>
             </div>
           </motion.div>
         </div>

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <Waves />
-      <div className="bg-[#888cea] text-blue-900 dark:bg-[#0a0c49] flex flex-wrap justify-center items-center py-10">
+      <div className="bg-[#888cea] text-blue-900 dark:bg-[#0a0c49] flex flex-wrap justify-center items-center py-10 -mt-[1px]">
         <div className="dark:text-gray-200">
           <a
             href="https://github.com/BilalSajid173"

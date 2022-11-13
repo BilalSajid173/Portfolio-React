@@ -40,19 +40,24 @@ const AboutMe = () => {
 
             <div className="font-sans pr-4">
               <p className="mb-2">
-                I'm a very ambitious front-end developer looking for a role in
-                an established IT company with the opportunity to work with the
-                latest technologies on challenging and diverse projects.
+                I'm a very ambitious software developer with a knack for problem
+                solving and efficient tech solutions. Having worked on various
+                projects covering a variety of domains, I have developed a
+                sincere understanding of a number of tools and technologies
+                required to build scalable and performance-driven softwares. I
+                love taking on new initiatives that inspire me to push past my
+                limits and go further than I have been before.
               </p>
               <p className="mb-2">
-                Quis viverra nibh cras pulvinar mattis nunc sed blandit libero.
-                Aenean et tortor at risus viverra adipiscing at in. Blandit
-                cursus risus at ultrices mi tempus. Sagittis purus sit amet
-                volutpat consequat mauris nunc.
+                I am looking for a role in an established IT company with the
+                opportunity to work with the latest technologies on challenging
+                and diverse projects. I would also be interested in any
+                freelance work that comes under the umbrella of software
+                development.
               </p>
               <p>
-                Blandit cursus risus at ultrices mi tempus. Sagittis purus sit
-                amet volutpat consequat mauris nunc.
+                Feel free to contact me on any of my social outlets for a fun
+                chat 😀
               </p>
             </div>
           </motion.div>

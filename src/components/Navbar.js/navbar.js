@@ -80,8 +80,8 @@ const Navbar = () => {
           Bilal Sajid
         </div>
         <button onClick={darkModeHandler} className="p-1 mr-2 dark:text-white">
-          {!isDark && <LightModeIcon />}
-          {isDark && <DarkModeIcon />}
+          {isDark && <LightModeIcon />}
+          {!isDark && <DarkModeIcon />}
         </button>
         <div
           className={`${classes.rightdiv} hidden md:flex w-fit flex-wrap justify-center align-middle text-gray-700 dark:text-white`}
@@ -128,31 +128,31 @@ const Navbar = () => {
       >
         <button
           onClick={clickHandler.bind(null, "TopSection")}
-          className="transition-all duration-300 px-2 py-1 my-1 text-left hover:text-white"
+          className="transition-all duration-300 px-2 py-1 my-1 text-left"
         >
           <HomeIcon fontSize="large" />
         </button>
         <button
           onClick={clickHandler.bind(null, "AboutSection")}
-          className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
+          className="transition-all duration-300 my-1 text-left px-2 py-1"
         >
           <PersonIcon fontSize="large" />
         </button>
         <button
           onClick={clickHandler.bind(null, "ProjectSection")}
-          className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
+          className="transition-all duration-300 my-1 text-left px-2 py-1"
         >
           <LightbulbIcon fontSize="large" />
         </button>
         <button
           onClick={clickHandler.bind(null, "SkillsSection")}
-          className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
+          className="transition-all duration-300 my-1 text-left px-2 py-1"
         >
           <RemoveRedEyeIcon fontSize="large" />
         </button>
         <button
           onClick={clickHandler.bind(null, "ContactSection")}
-          className="transition-all duration-300 my-1 text-left px-2 py-1 hover:text-white"
+          className="transition-all duration-300 my-1 text-left px-2 py-1"
         >
           <MailOutlineIcon fontSize="large" />
         </button>
