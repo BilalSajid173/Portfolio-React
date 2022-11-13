@@ -11,9 +11,11 @@ const Work = () => {
   const [showArrow, setShowArrow] = useState(false);
   const cardVariants = {
     offscreen: {
+      opacity: 0,
       y: 300,
     },
     onscreen: {
+      opacity: 1,
       y: 0,
       transition: {
         type: "spring",
