@@ -81,7 +81,7 @@ const Home = () => {
         <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
           <div className="text-zone flex flex-wrap flex-col relative min-h-[17.8rem]">
             <h1
-              className="md:text-[56px] text-[40px]"
+              className="md:text-[48px] text-[36px]"
               style={{ fontFamily: "'Poppins', 'sans-serif'" }}
             >
               <span className={`${letterClass} _11`}>H</span>
