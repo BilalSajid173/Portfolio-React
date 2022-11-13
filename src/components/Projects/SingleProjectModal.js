@@ -7,12 +7,12 @@ const SingleProjectModal = (props) => {
   const SingleProjectModalContent = (
     <Fragment>
       {
-        <div className="p-2 dark:text-white flex flex-wrap justify-center h-full">
-          <div className="p-2 w-[40%]">
+        <div className="p-2 py-4 mb-4 relative overflow-auto scrollbar dark:text-white flex flex-wrap justify-center h-full">
+          <div className="p-2 w-[40%] sticky">
             <img
               src={props.img}
               alt="project_img"
-              className="mb-4 w-full h-[42%] object-contain"
+              className="mb-4 w-full h-[40%] object-cover"
             />
             <div className="mt-2 flex flex-wrap justify-center">
               <a
@@ -29,21 +29,36 @@ const SingleProjectModal = (props) => {
                 rel="noreferrer"
                 className="mx-2 transition-all duration-300 bg-[#abaeed] dark:bg-[#22268f] hover:scale-125 p-2 rounded-full"
               >
-                <GitHubIcon fontSize="large"/>
+                <GitHubIcon fontSize="large" />
               </a>
             </div>
           </div>
-          <div className="p-2 px-4 w-[60%]">
+          <div
+            style={{ fontFamily: "'Poppins', 'sans-serif'" }}
+            className="p-2 px-4 w-[60%]"
+          >
             <h1 className="font-bold text-2xl mb-2">Description</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <p>{props.details.desc}</p>
+            <h2 className="font-bold my-2">Features</h2>
+            <ul className="list-disc pl-4">
+              {props.details.features.map((feature) => {
+                return (
+                  <>
+                    <li>{feature}</li>
+                  </>
+                );
+              })}
+            </ul>
+            <h2 className="font-bold my-2">Tech Stack</h2>
+            <ul className="list-disc pl-4 flex flex-wrap">
+              {props.details.tools.map((feature) => {
+                return (
+                  <>
+                    <li className="w-[50%]">{feature}</li>
+                  </>
+                );
+              })}
+            </ul>
           </div>
         </div>
       }

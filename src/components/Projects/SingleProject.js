@@ -33,6 +33,7 @@ const SingleProject = (props) => {
           img={props.img}
           codeLink={props.codeLink}
           projectLink={props.projectLink}
+          details={props.details}
         />
       )}
       <motion.div
