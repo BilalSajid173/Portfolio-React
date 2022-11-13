@@ -152,7 +152,7 @@ const ContactForm = () => {
             <input
               type="submit"
               value="Send Message"
-              class="focus:outline-none mt-5 bg-purple-500 px-4 py-2 text-white font-bold w-full"
+              class="focus:outline-none cursor-pointer hover:bg-purple-600 rounded-sm mt-5 bg-purple-500 px-4 py-2 text-white font-bold w-full"
             />
           </form>
         </div>

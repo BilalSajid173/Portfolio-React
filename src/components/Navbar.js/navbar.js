@@ -127,7 +127,7 @@ const Navbar = () => {
       <div
         className={`duration-300 ease-in-out transition-all transform ${
           showMenu ? "-translate-x-0" : "-translate-x-full"
-        } py-3 flex flex-col w-[4rem] md:hidden items-center justify-center top-56 opacity-80 left-0 fixed h-[18rem] bg-white z-20 ml-auto dark:bg-[#1b3c8a] text-gray-700 dark:text-white`}
+        } py-3 flex flex-col w-[4rem] md:hidden items-center justify-center top-56 opacity-80 left-0 fixed h-[18rem] bg-[#ebecff] z-20 ml-auto dark:bg-[#1b3c8a] text-gray-700 dark:text-white`}
       >
         <button
           onClick={clickHandler.bind(null, "TopSection")}
