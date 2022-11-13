@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 import "./Work.scss";
 import Projects from "./Projects";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SingleProject from "./SingleProjectModal";
 
 const Work = () => {
   const [showArrow, setShowArrow] = useState(false);
+  const [showProject, setShowProject] = useState(false);
   const cardVariants = {
     offscreen: {
       opacity: 0,
@@ -43,8 +45,15 @@ const Work = () => {
   const leaveHandler = () => {
     setShowArrow(false);
   };
+
+  const showProjectHandler = () => {
+    setShowProject((prev) => {
+      return !prev;
+    });
+  };
   return (
     <>
+      {showProject && <SingleProject onClick={showProjectHandler} />}
       <div className="md:px-10 px-7 py-10 flex items-center justify-center flex-col">
         <h2
           id="ProjectSection"
@@ -66,6 +75,7 @@ const Work = () => {
             >
               <motion.div variants={cardVariants}>
                 <div
+                  onClick={showProjectHandler}
                   className="flex flex-col md:m-[1rem] md:w-[290px] lg:w-[350px] p-[1rem] rounded-sm bg-purple-300 dark:bg-[#372656] hover:shadow-lg dark:text-gray-200 transition-all duration-300 ease-in"
                   key={index}
                 >
