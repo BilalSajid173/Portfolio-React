@@ -4,14 +4,14 @@ import reactDom from "react-dom";
 const Backdrop = (props) => {
   return (
     <div
-      className="fixed top-0 left-0 w-full h-full z-30 bg-gray-700 opacity-30"
+      className="fixed top-0 left-0 w-full h-full z-30 bg-gray-700 opacity-80"
       onClick={props.onClick}
     ></div>
   );
 };
 const ModalOverlay = (props) => {
   return (
-    <div className="overflow-y-auto scrollbar fixed top-24 left-[4%] w-11/12 md:w-[50rem] md:left-[calc(50%-25rem)] lg:w-[60rem] lg:left-[calc(50%-30rem)] h-4/6 p-2 sm:p-4 z-50 rounded-sm bg-[#888cea] dark:bg-[#0a0c49]">
+    <div className="overflow-y-auto shadow-2xl scrollbar fixed top-24 left-[4%] w-11/12 md:w-[50rem] md:left-[calc(50%-25rem)] lg:w-[60rem] lg:left-[calc(50%-30rem)] h-4/6 p-2 sm:p-4 z-50 rounded-sm bg-[#888cea] dark:bg-[#0a0c49]">
       {props.children}
     </div>
   );
