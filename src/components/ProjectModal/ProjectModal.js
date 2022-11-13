@@ -11,7 +11,7 @@ const Backdrop = (props) => {
 };
 const ModalOverlay = (props) => {
   return (
-    <div className="overflow-y-auto scrollbar fixed top-24 left-[4%] w-11/12 md:w-[60rem] md:left-[calc(50%-30rem)] h-4/6 p-2 sm:p-4 z-50 rounded-sm bg-[#888cea] dark:bg-[#0a0c49]">
+    <div className="overflow-y-auto scrollbar fixed top-24 left-[4%] w-11/12 md:w-[50rem] md:left-[calc(50%-25rem)] lg:w-[60rem] lg:left-[calc(50%-30rem)] h-4/6 p-2 sm:p-4 z-50 rounded-sm bg-[#888cea] dark:bg-[#0a0c49]">
       {props.children}
     </div>
   );
