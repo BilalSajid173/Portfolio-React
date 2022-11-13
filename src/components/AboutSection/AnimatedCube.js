@@ -33,9 +33,9 @@ const AnimatedCube = () => {
             </div> */}
 
       <div className="stage-cube-cont">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
+        <div id={`${isDark ? "stars" : "starslight"}`}></div>
+        <div id={`${isDark ? "stars2" : "stars2light"}`}></div>
+        <div id={`${isDark ? "star3" : "star3light"}`}></div>
         <div className="cubespinner">
           <div className={`face1 ${!isDark ? "darkcubecontainerdiv" : ""}`}>
             <FontAwesomeIcon icon={faNodeJs} color="#609b56" />
