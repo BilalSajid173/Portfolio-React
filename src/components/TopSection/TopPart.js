@@ -80,7 +80,10 @@ const Home = () => {
       >
         <div className="home-page flex flex-wrap xl:w-[35%] lg:w-[45%] sm:w-[55%] mt-[2rem] sm:mt-0 w-full">
           <div className="text-zone flex flex-wrap flex-col relative min-h-[17.8rem]">
-            <h1 className="md:text-[56px] text-[40px]">
+            <h1
+              className="md:text-[56px] text-[40px]"
+              style={{ fontFamily: "'Poppins', 'sans-serif'" }}
+            >
               <span className={`${letterClass} _11`}>H</span>
               <span className={`${letterClass} _12`}>i,</span>
               <br />
@@ -111,7 +114,7 @@ const Home = () => {
               {typedTextVisible && (
                 <button
                   onClick={onButtonClick}
-                  className="dark:text-white p-2 border-2 mt-4 border-blue-700 hover:bg-blue-700 hover:text-white dark:border-green-500 dark:hover:bg-green-500"
+                  className="dark:text-white p-2 border-2 rounded-md mt-4 border-blue-700 hover:bg-blue-700 hover:text-white dark:border-green-500 dark:hover:bg-green-500"
                 >
                   Download Resume
                 </button>

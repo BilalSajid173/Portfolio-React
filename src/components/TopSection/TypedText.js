@@ -14,7 +14,7 @@ const TypedText = () => {
     <>
       <div>
         <span
-          className={`${classes.blinkingcursor} text-lg text-black dark:text-gray-400`}
+          className={`${classes.blinkingcursor} text-lg text-gray-700 dark:text-gray-400`}
         >
           {typedText}
         </span>
