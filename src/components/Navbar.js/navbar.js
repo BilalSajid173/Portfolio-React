@@ -76,7 +76,10 @@ const Navbar = () => {
             : "bg-[#888cea] dark:bg-[#0a0c49]"
         } transition-all duration-300 sticky top-0 z-10 flex flex-wrap items-center p-4 sm:px-8`}
       >
-        <div className="w-fit font-serif text-3xl px-0 md:px-2 font-black mr-auto text-gray-700 dark:text-white">
+        <div
+          className="w-fit text-3xl px-0 md:px-2 mr-auto text-gray-700 dark:text-white"
+          style={{ fontFamily: "'Poppins', 'sans-serif'" }}
+        >
           Bilal Sajid
         </div>
         <button onClick={darkModeHandler} className="p-1 mr-2 dark:text-white">
