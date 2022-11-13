@@ -141,7 +141,7 @@ const Work = () => {
           <button
             onMouseOver={hoverHandler}
             onMouseLeave={leaveHandler}
-            className=" hover:text-white p-2 px-4 border-2 rounded-md border-blue-700 dark:text-gray-200 mt-4 hover:bg-blue-700"
+            className=" hover:text-white p-2 px-4 border-2 rounded-md border-blue-600 dark:text-gray-200 mt-4 hover:bg-blue-600"
           >
             More Projects {showArrow && "->"}
           </button>

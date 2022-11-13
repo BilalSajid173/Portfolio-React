@@ -29,7 +29,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 20px 0px rgb(113, 95, 160);
+      box-shadow: 0 0 5px 0px rgb(113, 95, 160);
     }
   
     .face1 {
@@ -61,7 +61,7 @@
   .darkcubecontainerdiv{
     border: 1px solid rgb(130, 119, 210) !important;
     background: rgb(104, 126, 228) !important;
-    box-shadow: 0 0 20px 0px rgb(157, 135, 221) !important;
+    box-shadow: 0 0 5px 0px rgb(157, 135, 221) !important;
   }
   
   @keyframes spincube {
